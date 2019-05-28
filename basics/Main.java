@@ -3,10 +3,10 @@ import java.time.format.DateTimeFormatter;
 
 public class Main {
   public static void main(String[] args) {
-    // pluralize("dog", 0);
-    // pluralize("cat", 1);
-    // pluralize("turtle", 2);
-    // flipNHeads(4);
+    pluralize("dog", 0);
+    pluralize("cat", 1);
+    pluralize("turtle", 2);
+    flipNHeads(4);
     clock();
     
   }
