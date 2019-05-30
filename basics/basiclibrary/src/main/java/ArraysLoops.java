@@ -23,5 +23,5 @@ public class ArraysLoops {
         return false;
     }
 
-    public int calculatingAverages()
+//    public int calculatingAverages()
 }
