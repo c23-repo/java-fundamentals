@@ -23,5 +23,14 @@ public class ArraysLoops {
         return false;
     }
 
-    public int calculatingAverages()
+    public int calculatingAverages(){
+
+    }
+
+    public int[] lowestAverage(int [][] arrs) {
+        int[] ans = arrs[0];
+        float minAvg = average(arrs[0]);
+
+        for (int )
+    }
 }
