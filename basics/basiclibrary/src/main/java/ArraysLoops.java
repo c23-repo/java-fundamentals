@@ -11,7 +11,8 @@ public class ArraysLoops {
         }
         return diceOutput;
     }
-//received help from Chai
+
+    //received help from Chai
     public boolean containsDuplicates(int []inputArr){
         Arrays.sort(inputArr);
         System.out.println(inputArr);
@@ -23,5 +24,32 @@ public class ArraysLoops {
         return false;
     }
 
-//    public int calculatingAverages()
+    // received help from Will
+    public double calculatingAverages(int []arr){
+        double sum = 0;
+
+        for (int i = 0; i < arr.length; i++){
+            sum += arr[i];
+        }
+        double avg = sum / (double) arr.length;
+        return avg;
+    }
+
+    public double averageOfAverages(int [][]arr){
+        double lowestAvg = 0;
+        double []answer = new double[arr.length];
+
+        for (int i = 0; i < arr.length; i++){
+            if(i == 0){
+                answer[i] = calculatingAverages(arr[i]);
+                lowestAvg = answer[i];
+            }else {
+                answer[i] = calculatingAverages(arr[i]);
+                if (lowestAvg > answer[i]) {
+                    lowestAvg = answer[i];
+                }
+            }
+        }
+        return lowestAvg;
+    }
 }
