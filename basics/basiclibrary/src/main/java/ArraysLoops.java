@@ -23,7 +23,8 @@ public class ArraysLoops {
         return false;
     }
 
-    public int calculatingAverages(){
+
+   /* public int calculatingAverages(){
 
     }
 
@@ -33,4 +34,4 @@ public class ArraysLoops {
 
         for (int )
     }
-}
+}*/
