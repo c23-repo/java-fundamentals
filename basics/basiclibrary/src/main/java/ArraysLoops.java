@@ -52,4 +52,38 @@ public class ArraysLoops {
         }
         return lowestAvg;
     }
+
+    public String tally(ArrayList<String> arr) {
+        HashMap<String, Integer> votes = new HashMap<>();
+        String[] plants = new String[]{"Bush", "Shrub", "Hedge"};
+
+        for (String plant : plants) {
+            votes.put(plant, 0);
+        }
+
+        for (int i = 0; i < arr.size(); i++) {
+            if(arr.get(i) == "Bush"){
+                int votesSoFar = votes.get("Bush");
+                votes.put("Bush", votesSoFar + 1);
+            } else if(arr.get(i) == "Shrub"){
+                int votesSoFar = votes.get("Shrub");
+                votes.put("Shrub", votesSoFar + 1);
+            } else if(arr.get(i) == "Hedge"){
+                int votesSoFar = votes.get("Hedge");
+                votes.put("Hedge", votesSoFar + 1);
+            }
+        }
+
+        int maximum = 0;
+        String winner = "";
+
+        for (String plant : plants){
+            int count = votes.get(plant);
+            if (count > maximum){
+                maximum = count;
+                winner = plant;
+            }
+        }
+        return winner;
+    }
 }
